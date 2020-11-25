@@ -23,9 +23,8 @@ Route::post('password_reset/update', ['as' => 'password_reset.update', 'uses' =>
 
 Route::group(['middleware' => ['Api.auth']], function () {
 
-	Route::prefix('profile')->group(function () {
-		// Route::get('index', ['as' => 'profile.index', 'uses' => 'ProfileController@index']);
-		// Route::post('store', ['as' => 'profile.store', 'uses' => 'ProfileController@store']);
+	Route::prefix('practise')->group(function () {
+		Route::post('store', ['as' => 'practise.store', 'uses' => 'PractiseController@store']);
 	});
 
 });

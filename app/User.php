@@ -41,6 +41,16 @@ class User extends Authenticatable
     ];
 
     /**
+     * A user has one profile
+     * 
+     * @return 
+     */
+    public function profile()
+    {
+        return $this->hasOne(Profile::class, 'user_id');
+    }
+
+    /**
      * Handle the process of getting user resource
      *
      * @return

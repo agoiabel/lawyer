@@ -11,6 +11,7 @@ class DatabaseSeeder extends Seeder {
      */
     protected $table = [
         'users',
+        'court_holidays',
     ];
 
     /**
@@ -19,6 +20,7 @@ class DatabaseSeeder extends Seeder {
      */
     protected $seeder = [
         'UserTableSeeder',
+        'CourtHolidayTableSeeder',
     ];
 
     /**
